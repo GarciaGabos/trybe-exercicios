@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.1</title>
+    
+    <style>
+      main, section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <header> 
+      <h1 class="title">Exercício 5.1 - JavaEscripito </h1>
+    </header>    
+    <main class="main-content">
+      <section class="center-content">
+        <p>Texto padrão do nosso site</p>
+        <p>-----</p>
+        <p>Trybe</p>
+      </section>
+    </main>
+    <script>
+
+        function changetext (){
+            let paragraph = document.getElementsByTagName("p")[1];
+            paragraph.innerHTML = "Poder viver em paz";
+
+        }
+        changetext();
+
+        function changebackground (){
+            let backgroundz = document.getElementsByClassName("main-content")[0];
+            backgroundz.style.background = "rgb(76,164,109)"
+        }
+        changebackground ();
+
+        function changebackground2 (){
+            let background = document.getElementsByClassName("center-content")[0];
+            background.style.background = "white"
+        }
+        changebackground2 ();
+
+        function correction (){
+            let correcao = document.getElementsByTagName("h1")[0];
+            correcao.innerHTML = "Exercício 5.1 - Javascript"
+
+        }
+        correction ();
+
+        function uppercase (){
+            let upperz = document.getElementsByTagName("p");
+            for (let i = 0; i < upperz.length; i += 1)  {
+                upperz[i].innerText = upperz.innerText.toUpperCase();
+
+            }
+        }
+        uppercase ();
+
+        function showParagraphs() {
+            let paragraphs = document.getElementsByTagName('p');
+            for (let index = 0; index < paragraphs.length; index += 1) {
+                console.log(paragraphs[index].innerHTML);
+            }
+        }
+        showParagraphs();
+
+        
+
+
+        /*
+        Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
+        - document.getElementById()
+        - document.getElementsByClassName()
+        - document.getElementsByTagName()
+ Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+ Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+        */
+    </script>
+  </body>
+</html>
